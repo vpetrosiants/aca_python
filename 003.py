@@ -40,5 +40,28 @@ def sum_all(x):
 
 print(sum_all(a))
 
+#fuction sort array
+def sortp(x):
+    for i in range(0,len(x)-1):
+        d=x[i]
+        f=x[i + 1]
+        if d>f:
+            x[i+1]=d
+            x[i]=f
+    return x
+
+z=sortp(a)
+print (z)
+
+
+##fuction revers  array
+
+def reverp(x):
+    ss=[]
+    for i in range(len(x)-1,-1,-1):
+        ss.append(int(x[i]))
+    return ss
+zz=reverp(a)
+print(zz)
 
 
