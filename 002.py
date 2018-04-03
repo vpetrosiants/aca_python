@@ -29,7 +29,7 @@ if (len(name)>3 and test_name==False):
     res = input ('Please input year:')
     test=res.isdigit() #test year for digits
     in_check=0 #flag for check
-    while (len(res)<=3  or  test == False or len(res)>4):
+    while (len(res)<=3  or  test == False or len(res)>4 or (test ==True and int(res)>=n_year)): # if year < 3 digits or no digits or mor then 4 digits or ,ore then 2018
         in_check = input ('Wrong input, do you want retry1?(y/n) :')
         if in_check == 'y':
                 res = input ('Please input year, again:')
@@ -40,6 +40,9 @@ if (len(name)>3 and test_name==False):
                 elif len(res)>4:
                     print('year couldn\'t be in future')
                     res=''
+                elif (test == True and int(res)>=n_year):
+                    print('year couldn\'t be in future')
+                    res = ''
                 elif test == False:
                     print ('no number')
                     res=''
